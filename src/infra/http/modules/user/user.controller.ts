@@ -1,7 +1,7 @@
-import { Body, Controller, Post } from '@nestjs/common';
-import { CreateUserUsecase } from '../../../../modules/user/use-cases/createUser-usecase/createUser-usecase';
-import { CreateUserBody } from './dtos/create-user-body';
-import { UserViewModel } from './view-model/user-view-model';
+import { Body, Controller, Get, Post } from '@nestjs/common';
+import { CreateUserUsecase } from '../../../../modules/user/use-cases/create-user-usecase/create-user.usecase';
+import { CreateUserBody } from './dtos/create-user.body';
+import { UserViewModel } from './view-model/user-view.model';
 
 @Controller('users')
 export class UserController {

@@ -1,13 +1,13 @@
-import { CreateUserUsecase } from './createUser-usecase';
-import { UserRepositoryMock } from '../../repositories/user-repository-mock';
+import { CreateUserUsecase } from './create-user.usecase';
+import { UserMockRepository } from '../../repositories/user-mock.repository';
 import { compare } from 'bcrypt';
 
 let createUserUsecase: CreateUserUsecase;
-let userRepositoryMock: UserRepositoryMock;
+let userRepositoryMock: UserMockRepository;
 
 describe('Create User', () => {
   beforeEach(() => {
-    userRepositoryMock = new UserRepositoryMock();
+    userRepositoryMock = new UserMockRepository();
     createUserUsecase = new CreateUserUsecase(userRepositoryMock);
   });
 
